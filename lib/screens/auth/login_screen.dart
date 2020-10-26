@@ -4,25 +4,48 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Login"),
-      ),
-      body: Container(
-          child: Column(
+      body: Stack(
         children: [
-          RaisedButton(
-            onPressed: () {
-              Navigator.maybePop(context);
-            },
-            child: Text("Go back"),
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/cover2.png"), fit: BoxFit.cover),
+            ),
           ),
-          Text("Login"),
-          RaisedButton(
-            onPressed: () {},
-            child: Text("Login"),
+          Container(
+            decoration: BoxDecoration(color: Color(0xAA000000)),
+          ),
+          SafeArea(
+            child: Container(
+              child: Column(
+                children: [
+                  Container(
+                    child: Center(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 80),
+                        child: Text(
+                          "Foodybite",
+                          style: TextStyle(
+                            fontSize: 40,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20.0),
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text("Login"),
+                  ),
+                  Text("Login"),
+                ],
+              ),
+            ),
           ),
         ],
-      )),
+      ),
     );
   }
 }
