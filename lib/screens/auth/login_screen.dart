@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       body: Stack(
         children: [
@@ -13,11 +14,12 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
           Container(
-            decoration: BoxDecoration(color: Color(0xAA000000)),
+            decoration: BoxDecoration(color: Color(0x88000000)),
           ),
           SafeArea(
             child: Container(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     child: Center(
@@ -34,12 +36,107 @@ class LoginScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20.0),
-                  RaisedButton(
-                    onPressed: () {},
-                    child: Text("Login"),
-                  ),
-                  Text("Login"),
+                  Column(children: [
+                    Container(
+                      width: size.width * 0.8,
+                      decoration: BoxDecoration(
+                        color: Color(0x40FFFFFF),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      padding: EdgeInsets.symmetric(
+                        vertical: 3.0,
+                        horizontal: 15.0,
+                      ),
+                      child: TextField(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                        decoration: InputDecoration(
+                          contentPadding: EdgeInsets.all(0.0),
+                          hintStyle: TextStyle(
+                            color: Colors.white70,
+                          ),
+                          icon: Icon(
+                            Icons.email_outlined,
+                            color: Colors.white,
+                          ),
+                          hintText: "Email",
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 17.0),
+                    Container(
+                      width: size.width * 0.8,
+                      decoration: BoxDecoration(
+                        color: Color(0x40FFFFFF),
+                        borderRadius: BorderRadius.circular(10.0),
+                      ),
+                      padding: EdgeInsets.symmetric(
+                        vertical: 3.0,
+                        horizontal: 15.0,
+                      ),
+                      child: TextField(
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                        decoration: InputDecoration(
+                          contentPadding: EdgeInsets.all(0.0),
+                          hintStyle: TextStyle(
+                            color: Colors.white70,
+                          ),
+                          icon: Icon(
+                            Icons.lock_outline,
+                            color: Colors.white,
+                          ),
+                          hintText: "Password",
+                          border: InputBorder.none,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      child: FlatButton(
+                        onPressed: () {},
+                        child: Text(
+                          "Forgot Password?",
+                          style: TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ),
+                      width: size.width * 0.85,
+                      alignment: Alignment.bottomRight,
+                    ),
+                    SizedBox(
+                      height: 50.0,
+                    ),
+                    Container(
+                      width: size.width * 0.8,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10.0),
+                        child: FlatButton(
+                          onPressed: () {},
+                          child: Text("Login"),
+                          color: Color(0xFF5663FF),
+                          textColor: Colors.white,
+                          padding: EdgeInsets.symmetric(vertical: 18.0),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 50.0,
+                    ),
+                    Text(
+                      "Create New Account",
+                      style: TextStyle(
+                        color: Colors.white,
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30.0,
+                    ),
+                  ]),
                 ],
               ),
             ),
