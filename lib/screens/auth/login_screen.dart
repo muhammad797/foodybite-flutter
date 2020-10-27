@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodybite/widgets/Button.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -110,19 +111,7 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(
                       height: 50.0,
                     ),
-                    Container(
-                      width: size.width * 0.8,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(10.0),
-                        child: FlatButton(
-                          onPressed: () {},
-                          child: Text("Login"),
-                          color: Color(0xFF5663FF),
-                          textColor: Colors.white,
-                          padding: EdgeInsets.symmetric(vertical: 18.0),
-                        ),
-                      ),
-                    ),
+                    Button(label: "Login"),
                     SizedBox(
                       height: 50.0,
                     ),
