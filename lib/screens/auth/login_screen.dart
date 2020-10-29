@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodybite/widgets/Button.dart';
+import 'package:foodybite/widgets/button.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -111,7 +111,7 @@ class LoginScreen extends StatelessWidget {
                     SizedBox(
                       height: 50.0,
                     ),
-                    Button(label: "Login"),
+                    Button(),
                     SizedBox(
                       height: 50.0,
                     ),

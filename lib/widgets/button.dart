@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
-  String label = "";
-
-  Button(this.label);
 
   @override
   Widget build(BuildContext context) {
